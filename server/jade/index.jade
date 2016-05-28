@@ -1,0 +1,24 @@
+doctype html
+html(lang='en', ng-app='app')
+    head
+        meta(charset='UTF-8')
+        title Angular
+        link(rel='stylesheet', type='text/css', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css')
+    body
+        .container
+            .center-block(ng-controller='friendsController')
+                table.table.table-striped
+                    thead
+                        tr
+                            td
+                                h2.text-center Friends list
+                    tbody
+                        tr(ng-repeat='friend in friends')
+                            td
+                                contact-card(first-name='friend.first_name', last-name='friend.last_name') {{$index+1}}
+                    
+        script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js')
+        script(src='https://code.jquery.com/jquery-1.12.4.min.js')
+        script(src='js/angular_modules/directives.js')
+        script(src='js/angular_modules/controllers.js')
+        script(src='js/app.js')
