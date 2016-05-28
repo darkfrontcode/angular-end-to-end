@@ -4,7 +4,7 @@ table.table.table-striped
             td
                 h2.text-center Friends list
     tbody
-        tr(ng-repeat='friend in friends')
+        tr(ng-repeat='friend in home.friends')
             td
                 {{friend.first_name}}
                 //- contact-card(first-name='friend.first_name', last-name='friend.last_name') {{$index+1}}
