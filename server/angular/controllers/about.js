@@ -3,5 +3,3 @@ export default class aboutController {
         this.listFriends = friends.list
     }
 }
-
-aboutController.$inject = ['friends'];

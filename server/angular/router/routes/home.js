@@ -1,10 +1,8 @@
-routes.$inject = ['$stateProvider'];
+import homeController from '../../controllers/home'
 
-export default function routes($stateProvider) {
-    $stateProvider.state('home', {
-        url: "/",
-        templateUrl: "pages/home",
-        controller: 'homeController',
-        controllerAs: 'home'
-    })
+export default {
+    url: "/",
+    templateUrl: "pages/home",
+    controller: homeController,
+    controllerAs: 'home'
 }

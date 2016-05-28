@@ -1,13 +1,7 @@
 import angular from 'angular'
 import router from 'angular-ui-router'
-
 import routerConfig from './router/config'
+import displayFriend from './directives/display_friend'
+import friends from './services/friends'
 
-import home from './modules/home'
-import about from './modules/about'
-
-angular.module('app', [
-    router,
-    home,
-    about
-]).config(routerConfig)
+angular.module('app', [router, friends, displayFriend]).config(routerConfig)
