@@ -15,10 +15,13 @@ app.set('view engine', 'jade')
 
 app.use(express.static(path.join(__dirname, '../../public')));
 app.use(webpack_dev_middleware(webpack_compiler, {
+	publicPath: webpack_config.output.publicPath,
 	stats: { colors: true },
 	historyApiFallback: true
 }))
-app.use(webpack_hot_middleware(webpack_compiler))
+app.use(webpack_hot_middleware(webpack_compiler, {
+	log: console.log
+}))
 
 app.get('/', function(req, res) {
     res.render('index');
