@@ -1,21 +1,28 @@
-doctype html
-html(lang='en', ng-app='app')
-    head
-        meta(charset='UTF-8')
-        base(href='/')
-        title Angular
-        link(rel='stylesheet', type='text/css', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css')
-    body
-        .container
-            .center-block(ng-controller='friendsController')
-                table.table.table-striped
-                    thead
-                        tr
-                            td
-                                h2.text-center Friends list
-                    tbody
-                        tr(ng-repeat='friend in friends')
-                            td
-                                contact-card(first-name='friend.first_name', last-name='friend.last_name') {{$index+1}}
-        
-        script(src='./app.js')
+extends layout
+
+block body
+    div.container
+        div.row
+            header.root
+                h2.text-center Angular end-to-end
+            
+            nav.root
+                ul.list-inline.text-center.text-uppercase
+                    li
+                        a.btn.btn-default.btn-sm(ui-sref="home")
+                            span Home
+                            i.glyphicon.glyphicon-send(aria-hidden="true")
+                    li
+                        a.btn.btn-default.btn-sm(ui-sref="about")
+                            span new post
+                            i.glyphicon.glyphicon-plus-sign(aria-hidden="true")
+            hr
+            
+            h2 Friends list
+            
+            hr
+            
+            .container
+                div(ui-view)
+    
+    script(src='./app.js')

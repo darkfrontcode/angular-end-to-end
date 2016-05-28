@@ -1,6 +1,4 @@
-var controllers = angular.module('controllers', []);
-
-controllers.controller('friendsController', ['$scope', function($scope){
+export default function($scope){
     $scope.friends = [{
         "id": 1,
         "first_name": "Doris",
@@ -25,5 +23,5 @@ controllers.controller('friendsController', ['$scope', function($scope){
         "id": 6,
         "first_name": "Juan",
         "last_name": "Wagner"
-    }]
-}])
+    }];
+}
