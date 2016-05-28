@@ -1,16 +1,13 @@
-import path from 'path'
-import webpack from 'webpack'
+var path = require('path'),
+	webpack = require('webpack');
 
 module.exports = {
-	devtool: 'eval-source-map',
 	entry: [
-		'webpack/hot/dev-server',
-		'webpack-hot-middleware/client',
 		path.join(__dirname, '../angular/app.js')
 	],
 	output: {
 		path: path.join(__dirname, '../../public'),
-		filename: "app.js"
+		filename: "app.js",
 	},
 	resolve: {
 		extensions: ['', '.js']
@@ -26,7 +23,7 @@ module.exports = {
 	},
 	plugins: [
 		new webpack.optimize.OccurenceOrderPlugin(),
-		new webpack.HotModuleReplacementPlugin(),
-		new webpack.NoErrorsPlugin()
+		new webpack.optimize.UglifyJsPlugin(),
+		new webpack.BannerPlugin("{copyright:['Dark Front Code','https://github.com/darkfrontcode']}")
 	]
 }

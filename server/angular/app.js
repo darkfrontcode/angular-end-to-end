@@ -1,4 +1,6 @@
-import angular from 'angular'
-import friend_controller from './controllers/friends'
+// import angular from 'angular'
+// import friend_controller from './controllers/friends'
+//
+// const app = angular.module('app', ['friend_controller', 'directives']);
 
-const app = angular.module('app', ['friend_controller', 'directives']);
+console.log('works dude, awesome =}');
