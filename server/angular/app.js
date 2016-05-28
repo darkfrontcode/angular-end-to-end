@@ -3,11 +3,11 @@ import router from 'angular-ui-router'
 
 import routerConfig from './router/config'
 
-import homeModule from './modules/home'
-import aboutModule from './modules/about'
+import home from './modules/home'
+import about from './modules/about'
 
 angular.module('app', [
     router,
-    homeModule,
-    aboutModule
+    home,
+    about
 ]).config(routerConfig)

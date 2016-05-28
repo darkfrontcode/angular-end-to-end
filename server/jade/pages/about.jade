@@ -1,1 +1,14 @@
-h2 {{about.title}}
+nav.root
+    ul.list-inline.text-center.text-uppercase
+        li
+            a.btn.btn-primary.btn-xs.text-capitalize(ui-sref="home") Back to home
+hr
+
+table.table.table-striped
+    thead
+        tr
+            td
+                h2.text-center Your friends list
+    tbody
+        tr(ng-repeat='friend in about.listFriends')
+            td {{friend.first_name}}&nbsp;{{friend.last_name}}

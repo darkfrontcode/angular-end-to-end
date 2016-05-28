@@ -1,10 +1,21 @@
-table.table.table-striped
-    thead
-        tr
-            td
-                h2.text-center Friends list
-    tbody
-        tr(ng-repeat='friend in home.friends')
-            td
-                {{friend.first_name}}
-                //- contact-card(first-name='friend.first_name', last-name='friend.last_name') {{$index+1}}
+div.text-center
+    p
+        | Click in the button below to know
+        br
+        | who are your best pal
+    
+    h4(ng-if="home.name")
+        br
+        
+        | Your best pal is 
+        strong
+            u.text-primary {{home.name}}
+    br
+    
+    button.btn.btn-info(ng-click="home.shuffle()")
+        span(ng-if="!home.name") Find it out
+        span(ng-if="home.name") Try again?
+    
+    | &nbsp;&nbsp;
+    
+    button.btn.btn-info(ng-if="home.name", ui-sref="about") See full list of your friends
