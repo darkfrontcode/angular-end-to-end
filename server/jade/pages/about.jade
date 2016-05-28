@@ -10,7 +10,6 @@ table.table.table-striped
             td
                 h2.text-center Your friends list
     tbody
-        tr(ng-repeat='friend in about.listFriends')
+        tr(ng-repeat="friend in about.listFriends | orderBy:'first_name'")
             td
                 display-friend(friend="friend")
-            //- td {{friend.first_name}}&nbsp;{{friend.last_name}}
