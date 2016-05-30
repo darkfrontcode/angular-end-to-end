@@ -9,7 +9,7 @@ module.exports = {
     },
     not_duplicate: function(){
         var items = this.elements,
-            friend_name = element(by.css('h4 strong u')).getText();
+            friend_name = items.best_friend_name.getText();
         items.try_again.click();
         expect(items.best_friend_name.getText()).not.toBe(friend_name);
         items.full_list.click();
@@ -27,6 +27,6 @@ module.exports = {
         best_friend_name: element(by.css('h4 strong u')),
         full_list: element(by.buttonText("See full list of your friends")),
         list_friends_title: element(by.css('table h2')),
-        list_of_friends: element.all(by.repeater('friend in about.listFriends'))
+        list_of_friends: element.all(by.repeater('friend in about.listFriends')),
     }
 }
