@@ -19,6 +19,14 @@ then type npm run production,
 open your favorite browser in http://localhost:3000 address
 ```
 
+## how to run in development
+
+```
+In your terminal,
+type npm start,
+open your favorite browser in http://localhost:3000 address
+```
+
 ## core-modules
 ```
 * angular
