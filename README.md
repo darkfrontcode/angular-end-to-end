@@ -1,10 +1,10 @@
-Angular End-To-End
+angular end-to-end
 =====================
 
 ## how to install
 
 ```
-Open your terminal,
+open your terminal,
 type npm install,
 wait until the packages are ready
 ```
@@ -12,7 +12,7 @@ wait until the packages are ready
 ## how to run in production
 
 ```
-In your terminal,
+in your terminal,
 type npm run webpack,
 wait until the process is finished,
 then type npm run production,
@@ -22,7 +22,7 @@ open your favorite browser in http://localhost:3000 address
 ## how to run in development
 
 ```
-In your terminal,
+in your terminal,
 type npm start,
 open your favorite browser in http://localhost:3000 address
 ```
