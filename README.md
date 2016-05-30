@@ -4,9 +4,19 @@ Angular End-To-End
 ## how to install
 
 ```
-npm install
-npm run production
-open http://localhost:3000
+Open your terminal,
+type npm install,
+wait until the packages are ready
+```
+
+## how to run in production
+
+```
+In your terminal,
+type npm run webpack,
+wait until the process is finished,
+then type npm run production,
+open your favorite browser in http://localhost:3000 address
 ```
 
 ## core-modules
