@@ -27,6 +27,6 @@ module.exports = {
         best_friend_name: element(by.css('h4 strong u')),
         full_list: element(by.buttonText("See full list of your friends")),
         list_friends_title: element(by.css('table h2')),
-        list_of_friends: element.all(by.repeater('friend in about.listFriends')),
+        list_of_friends: element.all(by.repeater('friend in about.listFriends'))
     }
 }
