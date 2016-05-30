@@ -26,7 +26,7 @@ module.exports = {
 	},
 	plugins: [
 		new webpack.optimize.OccurenceOrderPlugin(),
-		new webpack.optimize.UglifyJsPlugin(),
+		// new webpack.optimize.UglifyJsPlugin(),
 		new webpack.BannerPlugin("{copyright:['Dark Front Code','https://github.com/darkfrontcode']}")
 	]
 }
