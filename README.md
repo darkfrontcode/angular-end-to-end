@@ -55,7 +55,7 @@ babel-preset-es2015
 babel-preset-stage-0
 chai
 chai-as-promised
-cucumbe
+cucumber
 express
 jade
 jquery
