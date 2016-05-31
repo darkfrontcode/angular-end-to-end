@@ -10,7 +10,9 @@
     "webpack": "webpack --config ./server/webpack/production --progress --colors",
     "watch": "nodemon ./start",
     "open": "start chrome http://localhost:3000",
-    "clean": "rm -rf public/assets public/fonts public/main.js public/main.css"
+    "clean": "rm -rf public/assets public/fonts public/main.js public/main.css",
+    "cucumber": "protractor ./server/cucumber/config",
+    "protractor": "protractor ./server/protractor/config"
   },
   "author": "",
   "license": "ISC",
@@ -28,6 +30,7 @@
     "jade": "^1.11.0",
     "jquery": "^2.2.4",
     "protractor": "^3.3.0",
+    "protractor-cucumber-framework": "^0.5.0",
     "webpack": "^1.13.1",
     "webpack-dev-middleware": "^1.6.1",
     "webpack-hot-middleware": "^2.10.0"
