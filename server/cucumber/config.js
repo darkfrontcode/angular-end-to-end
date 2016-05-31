@@ -1,20 +1,17 @@
-// baseUrl: 'http://localhost:3000',
-// seleniumAddress: 'http://localhost:4444/wd/hub',
-
 exports.config = {
-    directConnect: true,
-    capabilities: {
-        'browserName': 'chrome'
-    },
-    framework: 'cucumber',
+    baseUrl: 'http://localhost:3000',
+    seleniumAddress: 'http://localhost:4444/wd/hub',
+    allScriptsTimeout: 11000,
     specs: [
         './features/*.feature'
     ],
-    jasmineNodeOpts: {
-        showColors: true
+    capabilities: {
+        'browserName': 'chrome'
     },
+    framework: 'custom',
+    frameworkPath: '../../node_modules/protractor-cucumber-framework',
     cucumberOpts: {
         require: './steps/definitions.js',
-        format: 'pretty' // or summary
+        format: "pretty"
     }
 };
