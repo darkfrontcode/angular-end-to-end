@@ -4,4 +4,4 @@ Feature: Visit home page
 
     Scenario: Visit index page
         Given I am on the homepage
-        Then the title should equal "Angular end-to-end"
+        Then The title of header should equal "Angular end-to-end"
