@@ -1,4 +1,4 @@
-angular end-to-end
+Angular End(2)End
 =====================
 
 ## how to install
